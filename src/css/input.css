@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.hide-scrollbar {
+    -ms-overflow-style: none;  
+    scrollbar-width: none; 
+}
+
+@layer base {
+  html {
+    font-family: 'Lato', sans-serif;
+  }
+  .font-titulo {
+    font-family: 'Pangolin', sans-serif;
+  }
+}
+
+@layer utilities {
+  .desktop-only {
+    @apply hidden;       /* default: hidden */
+  }
+  @media (min-width: 768px) {
+    .desktop-only {
+      @apply block;      /* md breakpoint */
+    }
+  }
+
+  .mobile-only {
+    @apply block;        /* default: visible */
+  }
+  @media (min-width: 768px) {
+    .mobile-only {
+      @apply hidden;     /* md breakpoint */
+    }
+  }
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
+    background-image: url(../img/elementos.png);
+    background-repeat: no-repeat;
+    background-size: 600% 600%;
+}
+
+.icon-flower1 {
+  background-position: 0 0;
+}
+.icon-morango1 {
+  background-position: 0 -56px;
+}
+.icon-bee1 {
+  background-position: 0 -115px;
+}
+.icon-duck1 {
+  background-position: 2px -158px;
+  background-size: 556% 522%;
+}
+.icon-flower2 {
+  background-position: -52px 0px;
+  background-size: 558% 555%;
+}
+.icon-layer1 {
+  background-position: -2px -241px;
+  background-size: 272% 510%;
+  width: 770px;
+  max-width: 100%;
+}
+.icon-layer2 {
+  background-position: -1050px -219px;
+  background-size: 272% 684%;
+  width: 770px;
+  max-width: 100%;
+  height: 37px;
+}
+
+@media (max-width: 768px) {
+  .icon-layer2 {
+    background-position: -717px -226px;
+    background-size: 272% 684%;
+    width: 770px;
+    max-width: 100%;
+    height: 37px;
+  }
+}
