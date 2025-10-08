@@ -52,7 +52,7 @@ $underline_color = 'border-purple-500';
             
             $excerpt    = get_the_excerpt();
             
-            $image_url  = get_the_post_thumbnail_url( $post_id, 'medium' );
+            $image_url  = get_the_post_thumbnail_url( $post_id, 'large' );
             
             if ( ! $image_url ) {
                 $image_url = 'https://professoraantenada.com.br/wp-content/uploads/reels/default-placeholder.jpg'; 

@@ -150,32 +150,64 @@ $default_description = 'Professora antenada: Sempre antenada sobre Educação, r
 
 
     <div id="menu-overlay" class="fixed top-0 left-0 w-full h-full bg-black/50 z-50 opacity-0 invisible pointer-events-none transition-opacity duration-300">
-        
-        <div id="menu-sidebar" class="w-80 h-full bg-white absolute right-0 shadow-2xl transform translate-x-full transition-transform duration-300">
-            
-            <button id="menu-close" class="absolute top-6 right-6 text-slate-700 hover:text-indigo-600"
+
+        <div id="menu-sidebar" class="w-80 h-full bg-white absolute right-0 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col">
+
+            <button id="menu-close" class="absolute top-6 right-6 text-slate-700 hover:text-indigo-600 z-10"
                     aria-label="Fechar Menu">
                 <i class="fas fa-times text-2xl"></i>
             </button>
 
-            <div class="p-8 mt-12">
-                <h3 class="text-xl font-bold mb-4 border-b pb-2">Navegação</h3>
-                
-                <nav>
-                    <?php 
-                    // Exemplo de menu de navegação. Certifique-se de registrar o menu no functions.php
-                    wp_nav_menu( array(
-                        'theme_location' => 'primary',
-                        'container'      => false,
-                        'menu_class'     => 'space-y-4 text-lg',
-                        'fallback_cb'    => false,
-                    ) );
-                    ?>
-                    <ul class="space-y-4 text-lg mt-6">
-                        <li><a href="<?php echo esc_url( home_url( '/sobre' ) ); ?>" class="text-slate-700 hover:text-indigo-600 transition-colors">Sobre</a></li>
-                        <li><a href="<?php echo esc_url( home_url( '/contato' ) ); ?>" class="text-slate-700 hover:text-indigo-600 transition-colors">Contato</a></li>
+            <div class="p-8 flex-grow flex flex-col justify-center items-center text-center">
+
+                <div class="mb-8">
+                    <img src="<?php echo esc_url( home_url( '/wp-content/uploads/2025/01/cropped-Logo-150x150.png' ) ); ?>"
+                        alt="Logo do Blog"
+                        class="max-w-[80px] h-auto rounded-full shadow-lg mx-auto"
+                    >
+                </div>
+
+                <nav class="w-full mb-8">
+                    <ul class="space-y-3 text-lg font-medium">
+                        <li>
+                            <a href="<?php echo esc_url( home_url( '/sobre-o-blog/' ) ); ?>"
+                            class="block py-2 text-slate-700 hover:text-white hover:bg-indigo-600 rounded-lg transition-all duration-200">
+                            Sobre o Blog
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?php echo esc_url( home_url( '/politicas-privacidade/' ) ); ?>"
+                            class="block py-2 text-slate-700 hover:text-white hover:bg-indigo-600 rounded-lg transition-all duration-200">
+                            Políticas de Privacidade
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?php echo esc_url( home_url( '/figurinhas/' ) ); ?>"
+                            class="block py-2 text-slate-700 hover:text-white hover:bg-indigo-600 rounded-lg transition-all duration-200">
+                            Figurinhas
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?php echo esc_url( home_url( '/jogo-da-memoria/' ) ); ?>"
+                            class="block py-2 text-slate-700 hover:text-white hover:bg-indigo-600 rounded-lg transition-all duration-200">
+                            Jogo da Memória
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?php echo esc_url( home_url( '/jogo-dos-dedinhos/' ) ); ?>"
+                            class="block py-2 text-slate-700 hover:text-white hover:bg-indigo-600 rounded-lg transition-all duration-200">
+                            Jogo dos Dedinhos
+                            </a>
+                        </li>
                     </ul>
                 </nav>
+
+                <div class="mt-auto pt-4 border-t border-slate-200 w-full">
+                    <p class="text-sm text-slate-600 italic">
+                        Obrigado por acessar o nosso blog! Sua presença é muito importante para nós.
+                    </p>
+                </div>
+
             </div>
         </div>
     </div>
