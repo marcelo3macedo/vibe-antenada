@@ -6,6 +6,8 @@
  * @package VibeAntenada
  */
 
+global $post;
+
 $site_url = esc_url( home_url( '/' ) );
 $logo_url = 'https://professoraantenada.com.br/wp-content/uploads/2025/01/cropped-Logo-150x150.png';
 $default_image = 'https://professoraantenada.com.br/wp-content/uploads/2025/01/default-image.jpg'; // Adicione uma imagem padrão real
@@ -30,12 +32,16 @@ $default_description = 'Professora antenada: Sempre antenada sobre Educação, r
     if ( is_single() || is_page() ) {
         global $post;
         
-        $seo_title = get_the_title() . ' - ' . get_bloginfo('name');
+        $seo_title = get_post_meta($post->ID, '_seo_antenado_title', true) ??  get_the_title() . ' - ' . get_bloginfo('name');
         
         if ( ! empty( $post->post_excerpt ) ) {
             $seo_description = esc_html( wp_trim_words( $post->post_excerpt, 30 ) );
         } else {
             $seo_description = esc_html( wp_trim_words( strip_tags( $post->post_content ), 30 ) );
+        }
+
+        if (get_post_meta($post->ID, '_seo_antenado_description', true)) {
+            $seo_description = get_post_meta($post->ID, '_seo_antenado_description', true);
         }
         
         $seo_url = get_permalink();
@@ -107,7 +113,7 @@ $default_description = 'Professora antenada: Sempre antenada sobre Educação, r
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
                     <img src="<?php echo esc_url($logo_url); ?>" 
                         alt="Logo Professora Antenada" 
-                        class="h-20 w-auto mx-auto object-contain" />
+                        class="h-16 w-auto mx-auto object-contain" />
                 </a>
             </h1>
 

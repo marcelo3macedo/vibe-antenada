@@ -27,7 +27,7 @@ $inactive_button_classes = 'bg-white text-slate-700 border-gray-200 hover:bg-sla
 $underline_color = 'border-pink-500';
 ?>
 
-<section id="dynamic-posts" class="container mx-auto px-4 py-12">
+<section class="dynamic-posts container mx-auto px-4 py-12">
     <div class="border border-slate-200 rounded-lg p-4 bg-white">    
             
         <div class="flex items-center">
@@ -42,21 +42,21 @@ $underline_color = 'border-pink-500';
         
 
         <div class="flex space-x-2 mb-6">
-            <button id="tab-popular" data-target="content-popular" 
+            <button data-target="content-popular" 
                     class="px-4 py-2 text-sm font-semibold rounded-lg border transition-colors duration-200 
                         <?php echo $active_button_classes; ?>">
                 Populares
             </button>
-            <button id="tab-recent" data-target="content-recent" 
+            <button data-target="content-recent" 
                     class="px-4 py-2 text-sm font-semibold rounded-lg border transition-colors duration-200 
                         <?php echo $inactive_button_classes; ?>">
                 Recentes
             </button>
         </div>
 
-        <div id="content-container">
+        <div class="content-container">
             
-            <ul id="content-popular" data-content="tab" class="space-y-2">
+            <ul data-content="tab" class="content-popular space-y-2">
                 <?php foreach ($popular_posts as $post) : ?>
                     <li class="flex items-start pb-2 border-b border-gray-100 last:border-b-0">
                         <a href="<?php echo esc_attr($post['slug']); ?>" class="flex-shrink-0 mr-4 block w-24 h-[85px] overflow-hidden rounded-md">
@@ -73,7 +73,7 @@ $underline_color = 'border-pink-500';
                 <?php endforeach; ?>
             </ul>
 
-            <ul id="content-recent" data-content="tab" class="space-y-2 hidden">
+            <ul data-content="tab" class="content-recent space-y-2 hidden">
                 <?php foreach ($recent_posts as $post) : ?>
                     <li class="flex items-start pb-2 border-b border-gray-100 last:border-b-0">
                         <a href="<?php echo esc_attr($post['slug']); ?>" class="flex-shrink-0 mr-4 block w-24 h-[85px] overflow-hidden rounded-md">

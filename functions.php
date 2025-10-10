@@ -14,7 +14,7 @@ add_action( 'after_setup_theme', 'vibe_antenada_setup' );
 
 function vibe_antenada_scripts() {
     wp_enqueue_style( 'vibe-antenada-main', get_template_directory_uri() . '/src/css/output.css', array(), '1.0.0' );
-
+    
     wp_enqueue_style( 'font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css', array(), '5.15.4' );
 
     wp_enqueue_script( 
