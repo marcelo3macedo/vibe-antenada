@@ -102,12 +102,12 @@ $default_description = 'Professora antenada: Sempre antenada sobre Educação, r
     <link href="https://fonts.googleapis.com/css2?family=Pangolin&family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
 
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-275530715"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-STHMF9DE06"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'G-275530715');
+        gtag('config', 'G-STHMF9DE06');
     </script>
     
     <?php wp_head(); ?>
