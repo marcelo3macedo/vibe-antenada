@@ -98,8 +98,17 @@ $default_description = 'Professora antenada: Sempre antenada sobre Educação, r
     <meta name="twitter:image" content="<?php echo esc_url( $seo_image ); ?>">
 
 
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?ver=6.7.4" data-ad-client="ca-pub-9829912735551664" crossorigin="anonymous"></script>    
+    <!--<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?ver=6.7.4" data-ad-client="ca-pub-9829912735551664" crossorigin="anonymous"></script>-->
     <link href="https://fonts.googleapis.com/css2?family=Pangolin&family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-275530715"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-275530715');
+    </script>
     
     <?php wp_head(); ?>
 
