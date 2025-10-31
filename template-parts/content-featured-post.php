@@ -20,7 +20,7 @@ $category_bg = 'bg-purple-500';
 $category_text = 'text-white';
 ?>
 
-<section id="featured-post-full" class="container mx-auto px-4 py-12">
+<section id="featured-post-full" class="container mx-auto px-2 py-4 md:px-4 md:py-12">
     
     <article class="relative w-full h-96 md:h-[500px] overflow-hidden rounded-xl shadow-2xl bg-black">
         
@@ -29,7 +29,7 @@ $category_text = 'text-white';
             <div class="absolute inset-0 bg-black/60"></div>
         </div>
 
-        <div class="relative z-10 p-6 md:p-12 h-full flex flex-col justify-end">
+        <div class="relative z-10 p-3 md:p-12 h-full flex flex-col justify-end">
             
             <div>
                 <a href="<?php echo esc_url( home_url( '/categoria/' . $featured_post['category_slug'] ) ); ?>"

@@ -27,7 +27,7 @@ $inactive_button_classes = 'bg-white text-slate-700 border-gray-200 hover:bg-sla
 $underline_color = 'border-pink-500';
 ?>
 
-<section class="dynamic-posts container mx-auto px-4 py-12">
+<section class="dynamic-posts container mx-auto py-2 px-3 md:px-4 md:py-12">
     <div class="border border-slate-200 rounded-lg p-4 bg-white">    
             
         <div class="flex items-center">

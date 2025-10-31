@@ -116,24 +116,24 @@ $default_description = 'Professora antenada: Sempre antenada sobre Educação, r
 <body <?php body_class( 'bg-gray-100 font-sans antialiased text-gray-800 bg-cyan-300' ); ?>>
 
     <header class="border-b border-slate-100 bg-white sticky top-0 z-50">
-        <div class="container mx-auto px-5 py-4 flex justify-between items-center">
+        <div class="container mx-auto px-2 py-2 md:px-5 md:py-4 flex justify-between items-center">
             
             <h1 class="text-3xl font-bold text-indigo-600">
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
                     <img src="<?php echo esc_url($logo_url); ?>" 
                         alt="Logo Professora Antenada" 
-                        class="h-16 w-auto mx-auto object-contain" />
+                        class="h-14 w-auto mx-auto object-contain" />
                 </a>
             </h1>
 
             <div class="flex items-center space-x-4">
                 
-                <button id="search-toggle" class="py-2 px-4 border bg-purple-500 rounded-full text-purple-600 hover:bg-purple-900 transition-colors duration-300"
+                <button id="search-toggle" class="py-2 px-3 border bg-purple-500 rounded-md text-purple-600 hover:bg-purple-900 transition-colors duration-300"
                         aria-label="Abrir Pesquisa">
                     <i class="fas fa-search text-lg text-white"></i>
                 </button>
 
-                <button id="menu-toggle" class="py-2 px-4 text-slate-700 hover:bg-purple-900 bg-purple-500 rounded-full transition-colors duration-300"
+                <button id="menu-toggle" class="py-2 px-3 text-slate-700 hover:bg-purple-900 bg-purple-500 rounded-md transition-colors duration-300"
                         aria-label="Abrir Menu">
                     <i class="fas fa-bars text-xl text-white"></i>
                 </button>
